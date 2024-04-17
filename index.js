@@ -9,13 +9,13 @@ var token = config.token;
 
 const token_bot = token;
 
-//var globalTunnel = require('global-tunnel');
+var globalTunnel = require('global-tunnel');
  
-//globalTunnel.initialize({
-//  host: proxy.host,
-//  port: proxy.puerto,
-//  sockets: 50 // optional pool size for each http and https
-//});
+globalTunnel.initialize({
+  host: proxy.host,
+  port: proxy.puerto,
+  sockets: 50 // optional pool size for each http and https
+});
     
 //  [----------------------------[BOT]----------------------]  //
 client.on('ready', () => {
