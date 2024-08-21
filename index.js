@@ -285,7 +285,7 @@ client.on("message", async message => {
     message.channel.send(embed)
 
   }});
-//  [----------------------------[$OFF]----------------------]  //
+//  [----------------------------[.OFF]----------------------]  //
 
 
 client.on("message", message => {
@@ -294,7 +294,7 @@ client.on("message", message => {
 
   if (message.content === '.off') {
                              // IDS founders
- const founders = ['1051649253468020756', '982737567017480223'];   
+ const founders = ['1233410235578847243', '982737567017480223'];   
 
  //Verify the user authorized
                           
