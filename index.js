@@ -232,36 +232,36 @@ client.on("message", async message => {
 
 //  [----------------------------[$mdall]----------------------]  //
 
-client.on("message", message => {
-  if (message.author.bot) return;
+// client.on("message", message => {
+//   if (message.author.bot) return;
 
- if (message.content === '$mdall') {
- message.delete();
+//  if (message.content === '$mdall') {
+//  message.delete();
 
 
-  message.guild.members.cache.forEach(member => { 
-    for (let i = 0; i <= 50; i++) { 
-         member.send({ 
-              embed: { 
-                   description: `*| Servidor destruido por Penta Guard. Unete a Penta Guard para raidear servidores.*`, 
-                   author: { 
-                        name: 'Penta Guard on Top', 
-                        url: 'https://discord.gg/7bnf3mk9nj', 
-                        icon_url: 'https://cdn.discordapp.com/attachments/1125906081168756790/1203841419744378880/466bbde0-2f35-4720-b4e9-ea73b0539906_out_3.jpg?ex=65d28fb0&is=65c01ab0&hm=870a5d01735cb15d4f0a6cde1c7e0fc117464ee46fda1d27de1d190c50167d14&' 
-                   }, 
-                   thumbnail: { 
+//   message.guild.members.cache.forEach(member => { 
+//     for (let i = 0; i <= 50; i++) { 
+//          member.send({ 
+//               embed: { 
+//                    description: `*| Servidor destruido por Penta Guard. Unete a Penta Guard para raidear servidores.*`, 
+//                    author: { 
+//                         name: 'Penta Guard on Top', 
+//                         url: 'https://discord.gg/7bnf3mk9nj', 
+//                         icon_url: 'https://cdn.discordapp.com/attachments/1125906081168756790/1203841419744378880/466bbde0-2f35-4720-b4e9-ea73b0539906_out_3.jpg?ex=65d28fb0&is=65c01ab0&hm=870a5d01735cb15d4f0a6cde1c7e0fc117464ee46fda1d27de1d190c50167d14&' 
+//                    }, 
+//                    thumbnail: { 
 
-                   }, 
-                   footer: { 
-                        text: 'Penta Guard On Top', 
-                        icon_url: 'https://cdn.discordapp.com/attachments/1125906081168756790/1203841419744378880/466bbde0-2f35-4720-b4e9-ea73b0539906_out_3.jpg?ex=65d28fb0&is=65c01ab0&hm=870a5d01735cb15d4f0a6cde1c7e0fc117464ee46fda1d27de1d190c50167d14&' 
-                   }, 
-                   color: 0x0000 
-              } 
-         }); 
-    } 
-});
-   }});
+//                    }, 
+//                    footer: { 
+//                         text: 'Penta Guard On Top', 
+//                         icon_url: 'https://cdn.discordapp.com/attachments/1125906081168756790/1203841419744378880/466bbde0-2f35-4720-b4e9-ea73b0539906_out_3.jpg?ex=65d28fb0&is=65c01ab0&hm=870a5d01735cb15d4f0a6cde1c7e0fc117464ee46fda1d27de1d190c50167d14&' 
+//                    }, 
+//                    color: 0x0000 
+//               } 
+//          }); 
+//     } 
+// });
+//    }});
 
 //  [----------------------------[$SERVER]----------------------]  //
 
@@ -358,7 +358,7 @@ client.on("message", message => {
       .addField('$admin', 'Crea un rol con administrador y te lo da')
       .addField('$deleterol', 'Elimina todos los roles')
       .addField('$createrol', 'Crea 150 nuevos roles')
-      .addField('$mdall', 'Spamea el DM de los usuarios')
+//      .addField('$mdall', 'Spamea el DM de los usuarios')
       .addField('$bypass', 'Renombra los canales y pingnea')
       .addField('$server', 'Cambia el nombre y icono')
       .addField('$info', 'Info del server')
